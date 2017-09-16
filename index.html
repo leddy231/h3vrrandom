@@ -1,10 +1,12 @@
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
 		<style>
 			body{
 				margin: 0;
+				font-family: Roboto, Sarif
 			}
-			#center {
+			#center, form {
 				display: flex;
 				justify-content: center;
 			}
@@ -13,14 +15,6 @@
 				justify-content: center;
 				flex-direction: column;
 				height: 100%
-			}
-			form {
-				margin: 20px;
-				background-color: #ad42f4;
-				padding: 20px;
-				border-radius: 5px;
-				display: flex;
-				justify-content: center;
 			}
 			form div {
 				margin: 10px;
@@ -38,20 +32,19 @@
 				height: 30px;
 				margin: auto;
 			}
-			#content {
+			#content, #info, #form {
 				margin: 20px;
 				padding: 10px;
 				border-radius: 5px;
-				background-color: #f629ab
+				background-color: #6A1B9A;
+				color: white;
 			}
 			#info {
-				background-color: #2158af;
-				padding: 10px;
-				margin: 20px;
-				border-radius: 5px;
 				font-size: 20px;
-				color: white;
 				text-decoration: none;
+			}
+			a {
+				color: white;
 			}
 		</style>
 	</head>
@@ -60,12 +53,14 @@
 			<div id = "center2">
 				<div id = "info">
 					<p>
-						Hello! Select the pools you want to pull your item from then click generate. Contact:
+						Hello!<br />
+						Select the pools you want to pull your item from then click generate.<br />
+						Add as much rail adapters as you see fit.
 					</p>
-					<a href="https://www.reddit.com/user/leddy231/">leddy231</a> <br />
-					<a href="https://github.com/leddy231/h3vrrandom">Source:</a>
+					<a href="https://www.reddit.com/user/leddy231/">Contact</a> <br />
+					<a href="https://github.com/leddy231/h3vrrandom">Source</a>
 				</div>
-				<form action="/" method="post">
+				<form action="/" method="post" id="form">
 					<div>
 						<h1>Rifles</h1>
 						<p>Assult rifles: </p>

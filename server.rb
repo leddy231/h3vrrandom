@@ -3,6 +3,7 @@ require "sinatra"
 
 post "/" do
 	inv = []
+	#hahaaa, there is so many better ways to do this. Its also the weekend.
 	if params["assault"]
 		inv << $assaults
 	end
@@ -48,18 +49,6 @@ post "/" do
 		item = inv.sample.pick
 	end
 	redirect to("/?item=#{item}")
-end
-
-get "/no" do
-	"no"
-end
-
-get "/yes" do
-	"yes"
-end
-
-get '/exit' do
-  Process.kill('TERM', Process.pid)
 end
 
 get "/" do

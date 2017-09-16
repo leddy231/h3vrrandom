@@ -9,7 +9,7 @@ $irons = Cat.new(["Backup Iron Sights", "Glow Ring Sights", "Shotgun Iron Sights
 $sights = Cat.new(["Elevated MR0", "Gamepoint RDS", "Holosight Long", "Holosight Short",
 "KDR Red Dot", "DKP7 OSA", "PK23", "Red Dot Compact", "Red Dot Tall"])
 $scopes = Cat.new(["1-24x Scope", "3-12x Scope", "ACOG", "8-32x Scope", "Ghost DR", "12-60x Scope"])
-$lasers = Cat.new(["Laser", "Tactical Laser"])
+$lasers = Cat.new(["Laser 1", "Laser 2"])
 $attachements = Cat.new([$lasers, "Tactical Light"])
 $magnifiers = Cat.new(["2x Magnifier", "3x Magnifier", "Gamepoint Magnifier"])
 $russian = Cat.new(["Kobra Reflex Sight", "PK01VS", "PS01 Scope"])
