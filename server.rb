@@ -47,7 +47,7 @@ post "/" do
 	else
 		item = inv.sample.pick
 	end
-	redirect to("/" + item)
+	redirect to("/?item=#{item}")
 end
 
 get "/no" do
@@ -62,10 +62,10 @@ get '/exit' do
   Process.kill('TERM', Process.pid)
 end
 
-get "/*" do
+get "/" do
 	html = File.open(File.dirname(__FILE__) + "/index.html"){|f| f.read}
-	if params['splat'][0]
-		html.gsub!("CONTENT", params['splat'][0])
+	if params['item']
+		html.gsub!("CONTENT", params['item'])
 	else
 		html.gsub!("CONTENT", "")
 	end
