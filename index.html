@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<style>
+			body{
+				margin: 0;
+			}
+			#center {
+				display: flex;
+				justify-content: center;
+			}
+			#center2{
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				height: 100%
+			}
+			form {
+				margin: 20px;
+				background-color: #ad42f4;
+				padding: 20px;
+				border-radius: 5px;
+				display: flex;
+				justify-content: center;
+			}
+			form div {
+				margin: 10px;
+			}
+			p, input {
+				margin: 3px;
+			}
+			input[type=checkbox] {
+			  transform: scale(1.5);
+			}
+			h1 {
+				margin-bottom: 0;
+			}
+			#submit {
+				height: 30px;
+				margin: auto;
+			}
+			#content {
+				margin: 20px;
+				padding: 10px;
+				border-radius: 5px;
+				background-color: #f629ab
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "center">
+			<div id = "center2">
+				<form action="/" method="post">
+					<div>
+						<h1>Rifles</h1>
+						<p>Assult rifles: </p>
+						<input type="checkbox" name="assault"/>
+						<p>Carbines: </p>
+						<input type="checkbox" name="carbine"/>
+						<p>SMGs: </p>
+						<input type="checkbox" name="smg"/>
+						<p>PDWs: </p>
+						<input type="checkbox" name="pdw"/>
+						<p>Battle rifles: </p>
+						<input type="checkbox" name="battle"/>
+						<p>Snipers: </p>
+						<input type="checkbox" name="sniper"/>
+					</div>
+					<div>
+						<h1>Shotguns</h1>
+						<p>Break action: </p>
+						<input type="checkbox" name="break"/>
+						<p>Tube fed: </p>
+						<input type="checkbox" name="tube"/>
+						<p>Magazine: </p>
+						<input type="checkbox" name="mag"/>
+						<p>Lever Action: </p>
+						<input type="checkbox" name="lever"/>
+					</div>
+					<div>
+						<h1>Pistols:</h1>
+						<p>Semi-autos: </p>
+						<input type="checkbox" name="semi"/>
+						<p>Full autos: </p>
+						<input type="checkbox" name="auto"/>
+						<p>Revolvers: </p>
+						<input type="checkbox" name="revolver"/>
+					</div>
+					<input type="submit" value="Generate" id = "submit"/>
+				</form>
+				<div id = "content">
+					CONTENT
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
