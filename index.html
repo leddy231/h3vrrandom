@@ -4,7 +4,9 @@
 		<style>
 			body{
 				margin: 0;
-				font-family: Roboto, Sarif
+				background-color: #263238;
+				font-family: Roboto, Sarif;
+				font-size: 30px;
 			}
 			#center, form {
 				display: flex;
@@ -39,10 +41,6 @@
 				background-color: #6A1B9A;
 				color: white;
 			}
-			#info {
-				font-size: 20px;
-				text-decoration: none;
-			}
 			a {
 				color: white;
 			}
@@ -64,37 +62,37 @@
 					<div>
 						<h1>Rifles</h1>
 						<p>Assult rifles: </p>
-						<input type="checkbox" name="assault"/>
+						<input type="checkbox" name="assault" !$assult/>
 						<p>Carbines: </p>
-						<input type="checkbox" name="carbine"/>
+						<input type="checkbox" name="carbine" !$carbine/>
 						<p>SMGs: </p>
-						<input type="checkbox" name="smg"/>
+						<input type="checkbox" name="smg" !$smg/>
 						<p>PDWs: </p>
-						<input type="checkbox" name="pdw"/>
+						<input type="checkbox" name="pdw" !$pwd/>
 						<p>Battle rifles: </p>
-						<input type="checkbox" name="battle"/>
+						<input type="checkbox" name="battle" !$battle/>
 						<p>Snipers: </p>
-						<input type="checkbox" name="sniper"/>
+						<input type="checkbox" name="sniper" !$sniper/>
 					</div>
 					<div>
 						<h1>Shotguns</h1>
 						<p>Break action: </p>
-						<input type="checkbox" name="break"/>
+						<input type="checkbox" name="break" !$break/>
 						<p>Tube fed: </p>
-						<input type="checkbox" name="tube"/>
+						<input type="checkbox" name="tube" !$tube/>
 						<p>Magazine: </p>
-						<input type="checkbox" name="mag"/>
+						<input type="checkbox" name="mag" !$mag/>
 						<p>Lever Action: </p>
-						<input type="checkbox" name="lever"/>
+						<input type="checkbox" name="lever" !$lever/>
 					</div>
 					<div>
 						<h1>Pistols</h1>
 						<p>Semi-autos: </p>
-						<input type="checkbox" name="semi"/>
+						<input type="checkbox" name="semi" !$semi/>
 						<p>Full autos: </p>
-						<input type="checkbox" name="auto"/>
+						<input type="checkbox" name="auto" !$auto/>
 						<p>Revolvers: </p>
-						<input type="checkbox" name="revolver"/>
+						<input type="checkbox" name="revolver" !$revolver/>
 					</div>
 					<input type="submit" value="Generate" id = "submit"/>
 				</form>

@@ -1,62 +1,29 @@
 require_relative "main.rb"
 require "sinatra"
 
+$params = ["assault", "carbine", "battle", "sniper", "smg", "pdw", "break", "tube", "mag", "lever", "semi", "auto", "revolver"]
+$invs = [$assaults, $carbines, $battlerifles, $snipers, $smgs, $pdws, $breakactions, $tubes, $mags, $lever, $semiauto, $autopistol, $revolvers]
+
 post "/" do
-	inv = []
-	#hahaaa, there is so many better ways to do this. Its also the weekend.
-	if params["assault"]
-		inv << $assaults
-	end
-	if params["carbine"]
-		inv << $carbines
-	end
-	if params["battle"]
-		inv << $battlerifles
-	end
-	if params["sniper"]
-		inv << $snipers
-	end
-	if params["smg"]
-		inv << $smgs
-	end
-	if params["pdw"]
-		inv << $pdws
-	end
-	if params["break"]
-		inv << $breakactions
-	end
-	if params["tube"]
-		inv << $tubes
-	end
-	if params["mag"]
-		inv << $mags
-	end
-	if params["lever"]
-		inv << $lever
-	end
-	if params["semi"]
-		inv << $semiauto
-	end
-	if params["auto"]
-		inv << $autopistol
-	end
-	if params["revolver"]
-		inv << $revolvers
-	end
-	if inv.size <= 0
-		item = ""
-	else
-		item = inv.sample.pick
-	end
-	redirect to("/?item=#{item}")
+	query = params.map{|key, value| "#{key}=#{value}"}.join("&")
+	redirect to ("/?#{query}")
 end
 
 get "/" do
 	html = File.open(File.dirname(__FILE__) + "/index.html"){|f| f.read}
-	if params['item']
-		html.gsub!("CONTENT", params['item'])
+	inv = []
+	$params.each.with_index do |param, index|
+		if params[param]
+			inv << $invs[index]
+			html.gsub!("!$" + param, "checked=\"true\"")
+		else
+			html.gsub!("!$" + param, "")
+		end
+	end
+	if inv.size <= 0
+		html.gsub!("CONTENT", "Hello")
 	else
-		html.gsub!("CONTENT", "")
+		html.gsub!("CONTENT", inv.sample.pick)
 	end
 	html
 end
