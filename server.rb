@@ -21,7 +21,7 @@ get "/" do
 		end
 	end
 	if inv.size <= 0
-		html.gsub!("CONTENT", "Hello")
+		html.gsub!("CONTENT", "Item appears here")
 	else
 		html.gsub!("CONTENT", inv.sample.pick)
 	end
